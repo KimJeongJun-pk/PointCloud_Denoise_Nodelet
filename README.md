@@ -9,6 +9,19 @@
 # Download
 ```
 $ cd ~/catkin_ws/src
-$ git clone 
+$ git clone https://github.com/KimJeongJun-pk/PointCloud_Denoise_Nodelet.git
+$ cd ~/catkin_ws
+$ catkin_make
 ```
 
+# Set CPP File
+'/points_denoise_nodelet/src/noise_removal_nodelet.cpp'을 열고 본인의 토픽으로 변경
+```
+sub_ = nh.subscribe("lidar Topic", 1, &NoiseRemovalNodelet::cloudCallback, this);
+```
+
+# Execution
+- 사용자의 LiDAR 노드를 실행 후 아래 'launch' 파일 실행
+```
+$ roslaunch points_denoise_nodelet noise_removal.launch
+```

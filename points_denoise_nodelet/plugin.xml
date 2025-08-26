@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<library path="lib/libnoise_removal_nodelet">
+  <class name="pointcloud_denoise_nodelet/NoiseRemovalNodelet"
+         type="pointcloud_denoise_nodelet::NoiseRemovalNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description>
+      Real-time point cloud noise removal using Statistical Outlier Removal.
+    </description>
+  </class>
+</library>

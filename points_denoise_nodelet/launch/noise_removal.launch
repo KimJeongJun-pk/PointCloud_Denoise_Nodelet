@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" output="screen" />
+
+  <node pkg="nodelet" type="nodelet" name="noise_removal"
+        args="load pointcloud_denoise_nodelet/NoiseRemovalNodelet nodelet_manager" output="screen">
+    <param name="mean_k" value="35"/>
+    <param name="std_dev_mul_thresh" value="0.3"/>
+    <remap from="/input_pointcloud" to="/ilidar/points"/>
+  </node>
+</launch>

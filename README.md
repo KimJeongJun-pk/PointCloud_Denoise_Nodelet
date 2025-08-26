@@ -6,6 +6,9 @@
   - 증가 : 엄격하게 처리, 노이즈가 아닌 데이터도 날아갈 수 있음
   - 감소 : 관대하게 처리, 노이즈가 남을 수 있음
 
-'''
-$ roslaunch points_denoise_nodelet noise_removal.launch
-'''
+# Download
+```
+$ cd ~/catkin_ws/src
+$ git clone 
+```
+

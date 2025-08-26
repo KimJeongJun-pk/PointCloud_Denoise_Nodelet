@@ -10,14 +10,17 @@
 ```
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/KimJeongJun-pk/PointCloud_Denoise_Nodelet.git
-$ cd ~/catkin_ws
-$ catkin_make
 ```
 
 # Set CPP File
-- `/points_denoise_nodelet/src/noise_removal_nodelet.cpp`을 열고 본인의 토픽으로 변경
+- `/points_denoise_nodelet/src/noise_removal_nodelet.cpp`을 열고 `lidar Topic`을 사용자의 토픽으로 변경
 ```
 sub_ = nh.subscribe("lidar Topic", 1, &NoiseRemovalNodelet::cloudCallback, this);
+```
+
+```
+$ cd ~/catkin_ws
+$ catkin_make
 ```
 
 # Execution
